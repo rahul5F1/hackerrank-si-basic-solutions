@@ -1,6 +1,6 @@
 /*
-Given an integer N, check whether it's an Armstrong number or not.
-Note: An Armstrong number is a number that is equal to the sum of its own digits each raised to the power of the number of digits.
+Given an integer N, check whether it is a Narcissistic number or not.
+Note: A narcissistic number is a number that is the sum of its own digits each raised to the power of the number of digits
 
 Input Format:
 First and only line of input contains a integer - N.
@@ -9,19 +9,22 @@ Constraints:
 0 <= N <= 109
 
 Output Format:
-Print "Yes" if the number is an Armstrong number, "No" otherwise.
+Print "Yes" if the number is Narcissistic number, "No" otherwise.
 
 Sample Input:
-153
+8208
 
 Sample Output:
 Yes
+
+Explanation:
+84 + 24 + 04 + 84 = 8208
 */
 
 //Program
 #include<bits/stdc++.h>
 using namespace std;
-bool checkArmstrong(int n){
+bool checkNarcissistic(int n){
     int sum=0,temp=n;
     int cnt=(int)(log10(n)+1);
     while(n>0){
@@ -34,7 +37,7 @@ bool checkArmstrong(int n){
 int main() {
     int n;
     cin>>n;
-    if(checkArmstrong(n))
+    if(checkNarcissistic(n))
         cout<<"Yes";
     else
         cout<<"No";
