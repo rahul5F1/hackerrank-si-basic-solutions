@@ -27,19 +27,19 @@ Sample Output:
 using namespace std;
 int main() {
     int m,n;
-    cin>>m>>n;
-    int a[m][n];
+    cin>>m>>n;                                            //taking the dimensions of matrix as inputs
+    int a[m][n];                                          //declaring a matrix of size (m,n)
     for(int i=0;i<m;i++) {
         for(int j=0;j<n;j++) {
-            cin>>a[i][j];
+            cin>>a[i][j];                                 //storing the elements of matrix
         }
     }
-    for(int j=0;j<n;j++) {
-        int sum = 0;
-        for(int i=0;i<m;i++) {
-            sum+=a[i][j];
+    for(int j=0;j<n;j++) {                               //outer loop iterates column wise
+        int sum = 0;                                     //for every column initially sum will be 0
+        for(int i=0;i<m;i++) {                          //nested loop iterates row wise
+            sum+=a[i][j];                               //summing up the elements of each column
         }
-        cout<<sum<<endl;
+        cout<<sum<<endl;                                //printing sum of each column one by one
     }
     return 0;
 }
