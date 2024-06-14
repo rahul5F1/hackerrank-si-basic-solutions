@@ -28,16 +28,16 @@ No
 using namespace std;
 int main() {
     string str;
-    cin>>str;
-    int cnt=0;
-    for(auto ch:str){
-        if(isdigit(ch))
-            cnt++;
+    cin>>str;                                                       //taking the input string
+    int cnt=0;                                                      //initially cnt will be 0
+    for(auto ch:str){                                               //impementing for each loop
+        if(isdigit(ch))                                             //isdigit() function is used to check if the character is digit or not
+            cnt++;                                                  //cnt will get incremented if the character of string is digit
     }
     if(cnt==(int)str.length())
-        cout<<"Yes";
+        cout<<"Yes";                                               //executes if cnt is equal to length of the string
     else
-        cout<<"No";
+        cout<<"No";                                                //executes if cnt is not equal to length of the string
     return 0;
 }
 
