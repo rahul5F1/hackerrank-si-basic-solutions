@@ -22,40 +22,41 @@ Yes
 using namespace std;
 int main() {
     string str;
-    cin>>str;
-    transform(str.begin(),str.end(),str.begin(),::tolower);         //transforming all upper case letters into lower case in the string
-    set<char> s;
-    for(auto ch:str)
-        s.insert(ch);
+    cin>>str;                                                                //taking the input string
+    transform(str.begin(),str.end(),str.begin(),::tolower);                  //transforming all upper case letters into lower case in the string
+    set<char> s;                                                             //declaring a set data structure in order to store unqique characters of string
+    for(auto ch:str)                                                        //implementing for each loop
+        s.insert(ch);                                                      //stores the characters of string and avoids storing the duplicate characters in to set
     if(s.size()==26)
-        cout<<"Yes";                                              // Space Complexity: O(n)
-    else                                                          // Time Complexity: O(n)
-        cout<<"No";
+        cout<<"Yes";                                                       //executes if set has 26 elements
+    else                                                          
+        cout<<"No";                                                       //executes if set does not have 26 elements 
     return 0;
-}
+}                                                                         // Space Complexity: O(n)        // Time Complexity: O(n) 
+
 
 //Using count array
 #include<bits/stdc++.h>
 using namespace std;
 bool checkPangram(string str){
-    transform(str.begin(),str.end(),str.begin(),::tolower);
-    int a[26]={0};
-    for(auto ch:str){
+    transform(str.begin(),str.end(),str.begin(),::tolower);               //transforming all upper case letters into lower case in the string
+    int a[26]={0};                                                        //declaring a count array of size 26 that represent 26 alphabets
+    for(auto ch:str){                                                     //implementing for each loop
         int ind=ch-'a';
-        a[ind]++;
+        a[ind]++;                                                         //increments the count of respective character in count array for each character of string
     }
-    for(int i=0;i<26;i++){
+    for(int i=0;i<26;i++){                                                //trvaersing the count array
         if(a[i]==0)
-            return false;
+            return false;                                                 //returning false if we find any character's count is 0
     }
-    return true;
+    return true;                                                          //returning true if we dont find any character with the count 0
 }
 int main() {
     string str;
-    cin>>str;
-    if(checkPangram(str))
-        cout<<"Yes";                                           //Space Complexity: O(26) ~ O(1)
-    else                                                       //Time Complexity: O(n+26) ~ O(n)
-        cout<<"No";
+    cin>>str;                                                             //taking the input string
+    if(checkPangram(str))                                                 //calling the checkPangram function
+        cout<<"Yes";                                                      //executes if checkPangram() function returns true
+    else                                                       
+        cout<<"No";                                                       //executes if checkPangram() function returns false
     return 0;
-}
+}                                                                        //Space Complexity: O(26) ~ O(1)           //Time Complexity: O(n+26) ~ O(n)
