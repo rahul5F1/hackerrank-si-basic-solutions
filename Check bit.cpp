@@ -23,10 +23,11 @@ true
 using namespace std;
 int main() {
     int n,i;
-    cin>>n>>i;
-    if(((n>>i)&1)==1)                          //doing and with 1 and ith bit of n from left 
-        cout<<"true";
-    else cout<<"false";
+    cin>>n>>i;                                  //taking n and i inputs 
+    if(((n>>i)&1)==1)                          //doing & with 1 and ith bit of n from left 
+        cout<<"true";                          //executes if ith bit is set
+    else 
+        cout<<"false";                        //executes if ith bit is not set
     return 0;
 }
 
