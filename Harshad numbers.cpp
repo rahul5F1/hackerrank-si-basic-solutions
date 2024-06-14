@@ -27,17 +27,17 @@ As 18 is divisible by the sum of its digits, it is a Harshad number.
 using namespace std;
 int main() {
     int n;
-    cin>>n;
-    int sum=0,temp=n;
-    while(temp>0){
-        int d=temp%10;
-        sum+=d;
-        temp/=10;
+    cin>>n;                                                  //taking the input
+    int sum=0,temp=n;                                        //initially sum will be 0 and temp stores n because of the operations we will do on n value gets change
+    while(temp>0){                                           //executes untill there will be no digits in n
+        int d=temp%10;                                       //extracting the last digit of n
+        sum+=d;                                              //adding the extracted digit to sum
+        temp/=10;                                            //removing last digit of n
     }
-    if(n%sum==0)
-        cout<<"Yes";
+    if((n % sum)==0)
+        cout<<"Yes";                                        //executes if the sum is divisible by n
     else
-        cout<<"No";
+        cout<<"No";                                         //executes if the sum is not divisible by n
     return 0;
 }
 
