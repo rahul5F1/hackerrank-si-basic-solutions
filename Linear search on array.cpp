@@ -24,38 +24,39 @@ Sample Output:
 #include<bits/stdc++.h>
 using namespace std;
 int linearSearch(int arr[],int n,int k){
-    for(int i=0;i<n;i++){
+    for(int i=0;i<n;i++){                                      //iterating the entire array
         if(arr[i]==k)
-            return i;
+            return i;                                          //returning the index of required element if we found in the array
     }
-    return -1;
+    return -1;                                                 //returning -1 if we didn't find the required element in the array
 }
 int main() {
     int n,k;
-    cin>>n>>k;
-    int arr[n];
+    cin>>n>>k;                                                  //taking no. of elements and element to search inputs
+    int arr[n];                                                 //declaring an array
     for(int i=0;i<n;i++)
-        cin>>arr[i];                                           //Space Complexit: O(1)
-    cout<<linearSearch(arr,n,k);                               //Time Complexity: O(n)
+        cin>>arr[i];                                           //storing the array elements
+    cout<<linearSearch(arr,n,k);                               //calling linear search function and returning the index of element to be searched
     return 0;
-}
+}                                                              //Space Complexit: O(1)          //Time Complexity: O(n)
+
 
 //Recursive approach
 #include<bits/stdc++.h>
 using namespace std;
 int linearSearch(int arr[],int n,int k,int ind){
     if(ind==n)
-        return -1;
+        return -1;                                             //returning -1 if we didn't find the required element in the array
     if(arr[ind]==k)
-        return ind;
-    return linearSearch(arr,n,k,ind+1);
+        return ind;                                           //returning the index of required element if we found in the array
+    return linearSearch(arr,n,k,ind+1);                       //recursive call to search still if there are elements in the array to search
 }
 int main() {
     int n,k;
-    cin>>n>>k;
-    int arr[n];
-    for(int i=0;i<n;i++)                                       //Space Complexity: O(n) (Auxiliary space)
-        cin>>arr[i];                                           //Time Complexity: O(n)
-    cout<<linearSearch(arr,n,k,0);
+    cin>>n>>k;                                                //taking no. of elements and element to search inputs
+    int arr[n];                                               //declaring an array
+    for(int i=0;i<n;i++)
+        cin>>arr[i];                                         //storing the array elements                    
+    cout<<linearSearch(arr,n,k,0);                           //calling linear search function and returning the index of element to be searched
     return 0;
-}
+}                                                            //Space Complexity: O(n) (Auxiliary space)          //Time Complexity: O(n)
