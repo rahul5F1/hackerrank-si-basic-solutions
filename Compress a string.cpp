@@ -33,26 +33,26 @@ L is repeating for 1 times - L1
 using namespace std;
 
 string compress(string str) {
-    string comp_str;
-    int ind=0;
-    int len=str.length();
+    string comp_str;                                                 //declaring a string that stores resultant string which is to be returned
+    int ind=0;                                                       //initially ind value will be 0
+    int len=str.length();                                            //declaring the length of string
     while(ind!=len) {
-        int count=1;
-        while((ind < len-1) && (str[ind]==str[ind+1])) {
-            count++;
-            ind++;
+        int count=1;                                                //declaring count variable initializing with 1 whenever the loop starts
+        while((ind < len-1) && (str[ind]==str[ind+1])) {            //executes the loop until there is any repeating character in the string
+            count++;                                                //incrementing count of repeatation of each character
+            ind++;                                                  //incrementing ind i.e., traversing the string till certain loop condition
         }
-        comp_str += str[ind] + to_string(count);
-        ind++;
+        comp_str += str[ind] + to_string(count);                    //appending the character and its count to resultant string
+        ind++;                                                      //since ind will be on last character of repeating section then we need to increment it
     }
 
-    return comp_str;
+    return comp_str;                                                //returning the resultant string
 }
 
 int main() {
     string str;
-    cin>>str;
-    cout<<compress(str)<<endl;                             //calling the function for compressing the string
+    cin>>str;                                                     //taking the input string
+    cout<<compress(str)<<endl;                                    //calling the function for compressing the string then printing the resultant string
     return 0;
 }
 
