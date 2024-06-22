@@ -25,9 +25,9 @@ int main() {
     cin>>n;
     int sum=0;
     for(int i=1;i<=n;i++)
-        sum+=i;
-    cout<<sum;                                       //Space Complexity: O(1)
-    return 0;                                        //Time Complexity: O(n)
+        sum+=i;                                      //adding up the numbers from 1 to n iteratively
+    cout<<sum;                                       
+    return 0;                                        //Space Complexity: O(1)         //Time Complexity: O(n)
 }
 
 //Optimal solution
@@ -36,7 +36,7 @@ using namespace std;
 int main() {
     int n;
     cin>>n;
-    int sum=(n*(n+1))/2;               // formula for sum of first N natural numbers
-    cout<<sum;                                      //Space Complexity: O(1)
-    return 0;                                       //Time Complexity: O(1)
+    int sum=(n*(n+1))/2;                           // formula for sum of first N natural numbers
+    cout<<sum;                                      
+    return 0;                                       //Space Complexity: O(1)           //Time Complexity: O(1)
 }
