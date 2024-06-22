@@ -27,17 +27,17 @@ Sample Output:
 using namespace std;
 int main() {
     int m,n;
-    cin>>m>>n;
-    if(m<1 || n>100)
+    cin>>m>>n;                                               //taking the input of dimensions of matrix
+    if(m<1 || n>100)                                         //an edge case
         return 0;
     for(int i=0;i<m;i++) {
-        int sum=0;
+        int sum=0;                                           //for every row we are declaring a sum initializing with 0
         for(int j=0;j<n;j++) {
             int num;
             cin>>num;
-            sum+=num;
+            sum+=num;                                       //summing up the elements of row
         }
-        cout << sum << endl;
+        cout << sum << endl;                                //printing the sum of each row simultaneously
     }
     return 0;
 }
