@@ -26,18 +26,18 @@ Explanation:
 using namespace std;
 bool checkNarcissistic(int n){
     int sum=0,temp=n;
-    int cnt=(int)(log10(n)+1);
+    int cnt=(int)(log10(n)+1);                            //digits count of given number
     while(n>0){
-        int d=n%10;
-        sum+=pow(d,cnt);
-        n/=10;
+        int d=n%10;                                       //extracting the last digit
+        sum+=pow(d,cnt);                                 //sum of its own digits each raised to the power of the number of digits
+        n/=10;                                           //eliminating the last digit
     }
-    return (temp==sum);
+    return (temp==sum);                                  //returns true if same or false otherwise
 }
 int main() {
     int n;
     cin>>n;
-    if(checkNarcissistic(n))
+    if(checkNarcissistic(n))                             //calling the function
         cout<<"Yes";
     else
         cout<<"No";
