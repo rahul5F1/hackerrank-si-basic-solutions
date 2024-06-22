@@ -25,10 +25,10 @@ int main() {
     cin>>str;
     for(char ch:str){
         if(ch>='a' && ch<='z')
-            cout<<(char)(ch-32);
+            cout<<(char)(ch-32);                                      //if lower case we convert it into upper case
         else
-            cout<<(char)(ch+32);                                      //Space Complexity: O(1)
-    }                                                                 //Time Complexity: O(n)
+            cout<<(char)(ch+32);                                      //if upper case we convert it into lower case
+    }                                                                 //Space Complexity: O(1)                     //Time Complexity: O(n)
     return 0;
 }
 
@@ -38,7 +38,7 @@ using namespace std;
 int main() {
     string str;
     cin>>str;
-    for(char ch:str)                                                 //Space Complexity: O(1)
-        cout<<(char)(ch^32);                                         //Time Complexity: O(n)
-    return 0;
+    for(char ch:str)                                                 
+        cout<<(char)(ch^32);                                          //doing xor i.e., if upper then becomes lower or if lower then becomes upper                               
+    return 0;                                                         //Space Complexity: O(1)                       //Time Complexity: O(n)
 }
