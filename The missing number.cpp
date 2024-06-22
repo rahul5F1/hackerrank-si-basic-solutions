@@ -27,7 +27,7 @@ int main() {
         numbers.push_back(num);
     int answer=accumulate(numbers.begin(), numbers.end(), 0);                  //sum of the input numbers
     int formula_answer=(100 * 101)/2;
-    cout<< formula_answer - answer <<endl;
+    cout<< formula_answer - answer <<endl;                                     //printing the required answer
     return 0;
 }
 
