@@ -28,9 +28,9 @@ int main() {
     cin>>ch;
     map<char,int> mp;
     for(auto c:str)
-        mp[c]++;
-     cout<<mp[ch];                                         //Space Complexity: O(n)
-    return 0;                                              //Time Complexity: O(n)
+        mp[c]++;                                           //storing thr characters with their frequency in map
+     cout<<mp[ch];
+    return 0;                                              //Space Complexity: O(n)      //Time Complexity: O(n)
 }
 
 //Using count array
@@ -43,11 +43,11 @@ int main() {
     cin>>ch;
     int a[256]={0};
     for(auto c:str){
-        int ind=c-'a';
-        a[ind]++;
+        int ind=c-'a';                                     //finding the index of particular character to implrement count array
+        a[ind]++;                                          //storing thr characters with their frequency in count array
     }
-     cout<<a[(int)ch-'a'];                                  //Space Complexity: O(256) ~ O(1)
-    return 0;                                               //Time Complexity: O(n)
+     cout<<a[(int)ch-'a'];                                 //printing the frequency of character by accessing its index in count array
+    return 0;                                               //Space Complexity: O(256) ~ O(1)               //Time Complexity: O(n)
 }
 
 //without using extra space
@@ -61,8 +61,8 @@ int main() {
     int cnt=0;
     for(auto c:str){
         if(c==ch)
-            cnt++;
+            cnt++;                                          //incrementing the cnt if string contains required character iteratively by traversing he string
     }
-    cout<<cnt;                                             //Space Complexity: O(1)
-    return 0;                                              //Time Complexity: O(n)
+    cout<<cnt;                                             
+    return 0;                                               //Space Complexity: O(1)                         //Time Complexity: O(n)
 }
