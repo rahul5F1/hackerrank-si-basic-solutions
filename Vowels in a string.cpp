@@ -24,14 +24,14 @@ bool checkVowels(string str){
     int cnt=0;
     for(auto ch:str){
         if(isalpha(ch) && (ch=='A' || ch=='a' || ch=='E' || ch=='e' || ch=='I' || ch=='i' || ch=='O' || ch=='o' || ch=='U' || ch=='u'))
-            cnt++;
+            cnt++;                                                        //incrementing cnt if the character is vowel
     }
-    return (cnt==(int)str.length());
+    return (cnt==(int)str.length());                                      //returns true if vowels count equal to length of string otherwise false
 }
 int main() {
     string str;
     cin>>str;
-    if(checkVowels(str))
+    if(checkVowels(str))                                                  //calling the function
         cout<<"Yes";
     else
         cout<<"No";
