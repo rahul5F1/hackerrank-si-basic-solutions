@@ -30,10 +30,10 @@ void element(int arr[],int n) {
     int i,j;
     for(i=0;i<n;i++) {
         for(j=0;j<n;j++) {
-            if(arr[i]==arr[j] && i!=j)
+            if(arr[i]==arr[j] && i!=j)                             //executes when we find any duplicate element and skips the iteration
                 break;
         }
-        if(j==n)
+        if(j==n)                                                   //executes when we find unique element and prints the element
             cout<<arr[i]<<" ";
     }
 }
@@ -43,7 +43,7 @@ int main() {
     int arr[n];
     for(int i=0;i<n;i++)
         cin>>arr[i];
-    element(arr,n);
+    element(arr,n);                                               //calling the function
     return 0;
 }
 //Space Complexity: O(1)  we are not using any extra space
